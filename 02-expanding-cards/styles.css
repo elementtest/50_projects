@@ -52,7 +52,26 @@ body {
 
 .panel.active {
   flex: 5;
+  opacity: 1;
   /* background-size: 100%; */
   /* when the panel is active you remove the auto from it because it is interfering with styling */
   /* changed to background size cover in order to fill the container completely  */
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  /* if the screen is UNDER 480 pixels then the following styles will take effect */
+  .container {
+    width: 100vw;
+    /* container takes up more room on smaller screens */
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+    /* want to remove the last two cards on smaller screens because it doesnt look too great */
+  }
 }
