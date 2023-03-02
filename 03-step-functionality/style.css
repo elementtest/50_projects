@@ -96,7 +96,7 @@ body {
 }
 
 .btn:active {
-  transform: sale(0.98);
+  transform: scale(0.98);
 }
 
 .btn:focus {
