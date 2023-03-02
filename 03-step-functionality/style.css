@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+  /* if you wnat to change the colors for everything you easily can by editing these CSS variables */
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
 * {
   box-sizing: border-box;
   /* border: 1px solid red; */
@@ -29,16 +35,75 @@ body {
   max-width: 100%;
   width: 350px;
 }
+.progress-container::before {
+  /* this is the gray bar stretching from the first circle to the last circle.  it is just the gray shopping cart bar guiding you from step 1 to step 4 */
+  content: '';
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
 
 .progress {
-  background-color: #3498db;
+  /* this is the actual blue progress bar of the shopping cart that you see as you go forwards on the path to buying things from step one to four */
+  background-color: var(--line-border-fill);
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   /* progress is the blue bar the transofmr translateY will move the blue bar up or down */
   height: 4px;
-  width: 50%;
+  width: 15%;
+  /* remember width will change the length of the bar right now just change to 5% */
   z-index: -1;
   /* puts the blue progress bar BEHIND the other numbers  */
+  /* also note for z index to work you need to have a position of relative absolute or fixed DECLARED */
+  transition: 1.4s ease;
+  /* the longer the time in s i.e 1.4s the slower the transition */
+}
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: sale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
 }
