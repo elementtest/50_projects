@@ -57,12 +57,12 @@ body {
   transform: translateY(-50%);
   /* progress is the blue bar the transofmr translateY will move the blue bar up or down */
   height: 4px;
-  width: 15%;
+  width: 0%;
   /* remember width will change the length of the bar right now just change to 5% */
   z-index: -1;
   /* puts the blue progress bar BEHIND the other numbers  */
   /* also note for z index to work you need to have a position of relative absolute or fixed DECLARED */
-  transition: 1.4s ease;
+  transition: 0.7s ease;
   /* the longer the time in s i.e 1.4s the slower the transition */
 }
 

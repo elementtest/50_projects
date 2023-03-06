@@ -2,7 +2,7 @@ const progress = document.getElementById('progress')
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
 const circles = document.querySelectorAll('.circle')
-
+console.log(circles)
 let currentActive = 1
 
 next.addEventListener('click', () => {
@@ -23,4 +23,29 @@ prev.addEventListener('click', () => {
     //makes it so you cant go back before the number one as far as the circles go
   }
   update()
+  //call the function called update so basically this is not a built in function it is a function we are going to define BELOW
 })
+
+function update() {
+  circles.forEach((circle, idx) => {
+    if (idx < currentActive) {
+      circle.classList.add('active')
+    } else {
+      circle.classList.remove('active')
+    }
+  })
+
+  const actives = document.querySelectorAll('.active')
+
+  progress.style.width =
+    ((actives.length - 1) / (circles.length - 1)) * 100 + '%'
+
+  if (currentActive === 1) {
+    prev.disabled = true
+  } else if (currentActive === circles.length) {
+    next.disabled = true
+  } else {
+    prev.disabled = false
+    next.disabled = false
+  }
+}
