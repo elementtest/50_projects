@@ -1,0 +1,87 @@
+preliminary notes::
+goal this project is a bit different.. take notes first as he codes THEN code along with the solution looking up what needs to be looked up
+
+search widget click an icon and you can see a search bar increase 
+
+HTML
+
+CSS
+
+basically you want to have a class of active 
+when it is active the input will expand and the button will move over
+
+background image linear gradient ??????
+
+.search 
+
+position relative so you can position things inside of it as absolute
+
+height: 
+
+.search .input 
+
+background color white #fff
+border: 0 takes away the border
+font size makes it bigger
+
+padding: 15px all around
+
+height: 50px
+
+width: 50px
+
+transition:  width 0.3s ease
+???????
+
+font size for the icon;;;;;
+!!!!!
+will increase the SIZE OF THE ICON.. not obvious
+
+position the child as absolute... 
+
+transition effect on the btn itself.. 
+you want the button to move over
+
+you want to push the button over
+
+transition transform
+??????????
+
+outline delete
+btn:focus, input:focus
+outline none
+wont see the outline
+
+.search.active 
+this means the search class WHEN IT HAS AN ACIVE CLASS
+
+.search.active .input
+want the input to go to 200px... when the search element is active THEN 
+it will go to 200
+
+.search.active .btn 
+transform traslateX(198px) 
+moving over on the x axis how many pixels.  
+
+JAVASCRIPT:
+
+btn add event listener... search classList.. toggle not remove.. 
+
+classList.toggle
+?????????
+
+input.focus()
+!!!!!!
+adding this inside of the event listener will make it so that it will focus the mouse bar will be flashing on and off inside of the search icon.. 
+good thing to know have a DOM element and focus() it when an event listener happens 
+
+!!!!!
+you can see from the projects we have done
+
+its all just putting specific classes thru our javascript add or remove or toggle a class
+THEN you have a transition to give us a cool little animation 
+
+
+
+
+
