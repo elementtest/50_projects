@@ -67,6 +67,61 @@ body {
   transform-origin: top left;
 }
 
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  /* transform: translateX(-100%); */
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  /* ABOVE:::: called a adjecent sibling selector...  */
+  margin-left: 15px;
+  /* the li's after the initial li are going to stick out 15 pixels... affects ALL OF the ones after the initial one... so inside nav then ul then the li and ALL the ones after will be styled this way */
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  /* this will now style the last one that to stick out even further.. so there are only 3 but now the third will stick out this much  and again if you add another li element like contact about.. shop etc then it will also be styled as 30.. so this + selector with css selects basically ALL elements after whichever one you select */
+}
+
 .content img {
   max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
 }
