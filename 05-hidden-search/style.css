@@ -26,4 +26,8 @@ body {
   border: 0;
   /* gets rid of black preset border around the search box */
   font-size: 18px;
+  padding: 15px;
+  /* space between content inside search bar and border */
+  height: 50px;
+  width: 50px;
 }
