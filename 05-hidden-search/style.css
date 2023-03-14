@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(90deg, blue, yellow);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* moves search box to center of the x axis*/
+  height: 100vh;
+  /* take total viewport height and slice into 100 pieces 1vh is one slice of those 100 */
+  /* the viewport without a height was collapsed to the height of the element... so you were seeing that justify content on the x axis was having an effect at centering but no effect on the y with align items because the height was completely collapsed.  increasing the height then makes the y adjustment able to happen */
+  overflow: hidden;
+  margin: 0;
+  /* eliminates margin on the body.. */
+}
+
+.search .input {
+  /* ^^ ORANGE COLORED SEARCH BAR */
+  /* ^^ targeting the search bar to left of magnifying glass */
+  background-color: orange;
+  border: 0;
+  /* gets rid of black preset border around the search box */
+  font-size: 18px;
+}
