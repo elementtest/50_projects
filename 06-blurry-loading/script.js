@@ -20,9 +20,13 @@ function blurring() {
 
   loadText.innerText = `${load}%`
   //change the text of the loading screen percentage... using `` whatever that is called and then using a variable inside which we studied before you have to use ${} the $ on the end is used as concatanation.... thats a string on the end of the variable to show its a percent
-  loadText.style.opacity = scale(load, 0, 100, 1, 0)
-
-  bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
+  let loaddPercentage = (loadText.style.opacity = scale(load, 0, 100, 1, 0))
+  //THIS IS THE LOADING TEXT PERCENTAGE I.E 5% NOT THE PICTURE... will start at the MOST CLEAR which is 1 and go to the MOST BLURRY WHICH IS 0 THE DOCUMENTATION IS RIGHT
+  //   console.log(loaddPercentage)
+  let pictureBlur = (bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`)
+  //THIS IS THE PICTURE... starts at 30px which is blurry and will become teh least blurry which is zero pixels... console log to make sure
+  console.log(pictureBlur)
+  //so console log confirms it... starts at most blurry picture of 30px and ends at LEAST BLURRY of 0 px
 }
 
 //https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
