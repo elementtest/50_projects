@@ -1,0 +1,96 @@
+want the image to take up the whole viewport
+so 100vh and 100vw
+
+z index:::
+-1 negative one
+want it to BE BEHIND the 0%
+
+filter: blur(opx)
+!!!! will start blurry and then making it way more clear as it progresses
+
+calc(100vw + 60px)
+the calc function will do math operations on what is in side the () 
+the one thing about calc is that you can combine together different units... so here we have vw and pixels being combined together 
+
+this is the true power of calc.  it allows you to add and modify to your objects... 
+
+IT ALLOWS YOU TO ADD MARGIN TO OBECTS WITHOUT USING MARGIN
+
+the syntax of the calc function you must have a space on BOTH SIDES OF THE OPERATION OR IT WILL NOT WORK 
+
+when you start to deal with css variables calc will shine... lets say you use the --width var defined in root at the top of the style sheet 
+
+we can define a value once and then modify it using calc that are useful in different palces in the style sheet.  
+
+jdsklfj dsfjskdl fjdskl fjsdkld fsdkjlf ajkl;d jklas jfkals; fjdkaldf aj
+
+
+makes it so the image when it is blurred is closer to the edges but unsure of why... to do research calc with images in css
+
+starts blurry and then will make its way up to being clear as it is loading
+
+SCRIPT JS
+
+two dom elements... the loading text... and the background image
+
+let load = 0 
+
+function blurring 
+load is incremented.... 
+want the function to load every 30 seconds...
+
+
+setInterval
+????
+
+int function will run the blurring funciton every 30 miliseconds... set as a variable called int
+
+it will just keep going forever.... 
+
+if the load value is greater than 99 then stop the intervatl
+
+you use the 
+clearInterval function on int... 
+
+so the setInterval will run the fucntion at an interval every X amount of time and the clear interval will then stop it i suppose
+
+clearInterval
+???
+
+loadText.innerText = `${load}%`
+
+increment load... with the blurring function load will then increment every 30 milliseconds... 
+then take the dom element of Loadtext and then make that.... load... so it will display the load going up
+cool
+
+loadtext.style.opacity = 
+
+this will be tricky
+because the opacity value will NOT BE the load value that will go from 0 to 100
+opacity will go from 0 to 1
+we want it to go from 1 and then go from 0 so some math is going to be involved to link the loading to the opacity.  
+
+my guess is that he will have to make the opacity value correlate by being divided by 100.  
+
+loadText.style.opacity = scale()
+
+const scale = (num, in min, in max, out min, out max) => {
+return (num - in min * out max - out min / in max - in min + out min 
+
+so we are putting into the scale function...
+(load is the number
+0 is in miniumum
+100 is in maximum
+1 is out minimum
+0 is out maximum
+
+ok... so there are four parameters... basically just a huge conversion to go from the two ranges of 0 to 100 for humans and 1 to 0 for the opacity for the computer 
+
+
+the math is going to be the hardest part of this... maing the converstion.  
+
+
+will start at a blur of 30 pixels down to 0 in the same amount of time that the load goes from 0 to 100... so this function just correlates transition over time for two ranges... 
+
+
+
