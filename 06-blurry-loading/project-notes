@@ -9,10 +9,21 @@ filter: blur(opx)
 !!!! will start blurry and then making it way more clear as it progresses
 
 calc(100vw + 60px)
-????
+the calc function will do math operations on what is in side the () 
+the one thing about calc is that you can combine together different units... so here we have vw and pixels being combined together 
 
-calc(100vh + 60px) 
-????? 
+this is the true power of calc.  it allows you to add and modify to your objects... 
+
+IT ALLOWS YOU TO ADD MARGIN TO OBECTS WITHOUT USING MARGIN
+
+the syntax of the calc function you must have a space on BOTH SIDES OF THE OPERATION OR IT WILL NOT WORK 
+
+when you start to deal with css variables calc will shine... lets say you use the --width var defined in root at the top of the style sheet 
+
+we can define a value once and then modify it using calc that are useful in different palces in the style sheet.  
+
+jdsklfj dsfjskdl fjdskl fjsdkld fsdkjlf ajkl;d jklas jfkals; fjdkaldf aj
+
 
 makes it so the image when it is blurred is closer to the edges but unsure of why... to do research calc with images in css
 
@@ -80,3 +91,6 @@ the math is going to be the hardest part of this... maing the converstion.
 
 
 will start at a blur of 30 pixels down to 0 in the same amount of time that the load goes from 0 to 100... so this function just correlates transition over time for two ranges... 
+
+
+
