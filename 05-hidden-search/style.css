@@ -19,6 +19,11 @@ body {
   /* eliminates margin on the body.. */
 }
 
+.search {
+  position: relative;
+  height: 50px;
+}
+
 .search .input {
   /* ^^ ORANGE COLORED SEARCH BAR */
   /* ^^ targeting the search bar to left of magnifying glass */
@@ -30,4 +35,38 @@ body {
   /* space between content inside search bar and border */
   height: 50px;
   width: 50px;
+  transition: width 0.3s ease;
+  /* when the properties of the orange bar change then it will follow along with the transition above  */
+}
+
+.btn {
+  /* ^^ magnifying glass icon ^^ */
+  background-color: red;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  /* !!! not apparant increasing font size will increase icon size */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  /* here you are making RED and ORANGE the same height and the same position in the un active position so the magnifying glass in on top of the search bar.  the idea is when you hit it.. then the active class will come into play */
+  transition: transform 0.3s ease;
+  /* when the properties of the magnifying glass icon change it will follow the transition above...  */
+}
+
+.btn:focus,
+.input:focus {
+  /* outline: none; */
+  ELIMINATING ANOTHER HTML BY DEFAULT SETTING... when you click a search bar an ugly black outline surrounds it... this just simply gets rid of it to look more sleak
+}
+
+.search.active .input {
+  width: 200px;
+}
+/* NOTE ON BOTH .SEARCH.ACTIVE .INPUT AND .SEARCH.ACTIVE .BTN>>>>> clever use... you put the active class on the search which ENCLOSES both the RED and the ORANGE and both will then be styled at the same time with ONE event listener...  */
+.search.active .btn {
+  transform: translateX(198px);
+  /* transform translate x will move the element WEST or EAST on the x axis.... use negative number for WEST and positive for EAST */
 }
