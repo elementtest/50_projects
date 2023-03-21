@@ -5,40 +5,19 @@
 }
 
 body {
-  background-color: #efedd6;
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
+  font-family: 'Roboto';
+  height: 100vh;
   overflow: hidden;
-  /* hides the scroll bar on the x axis */
+  margin: 0;
 }
 
 h1 {
-  margin: 10px;
-}
-
-.box {
-  background-color: steelblue;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 400px;
-  height: 200px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 20px 20px 20px;
-  transform: translateX(400%);
-  transition: transform 0.4s ease;
-}
-
-.box:nth-of-type(even) {
-  transform: translateX(-400%);
-}
-
-.box.show {
-  transform: translate(0);
-}
-
-.box h2 {
-  font-size: 45px;
+  font-size: 4rem;
+  /* very large font size like 40 50 in msword */
+  /* color: #fff; */
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  /* this is a point that needs work... the top moves it down from the top the left moves it AWAY from the left EAST DIRECTION but why not just change the values of left to compensate instead?  */
 }
