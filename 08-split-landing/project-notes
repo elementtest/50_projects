@@ -1,0 +1,129 @@
+
+
+scroll animation::::
+
+you start scrolling... and sections of the website will COME IN AS YOU SCROLL pretty cool
+
+javascript will tell where the trigger point is to tell the next points to come in 
+
+and if you go back up it will remove the blocks of content as you go up the page.  
+
+you can use this in a lot of different UI-s and websites
+
+multiple divs with the h2 content inside of each div 
+
+maybe 10?  something like that
+
+CSS:
+
+everytime is the same just styling hte body.. in a certain way.  
+
+get rid off the overflow and the height....
+because you want a scroll bar.  
+
+h1 
+
+
+
+transform: translateX()
+??????
+
+?????you are just moving over hte boxes maybe?  this needs work 
+
+
+.box.show 
+transform: translatex 0...
+
+i think i get it... the box originally is going to be translateX[[[[ in other words it will BE MOVED OFF SCREEEN]]]]]
+
+when the class of show is added to the box... the trnalsateX() [[AKA MOVE BOX ON THE X AXIS]]] will be moved to a position on the screen that can be seen by the user.  
+
+add a transition to the box... not the box show...
+?????
+???? this needs work... why is the transition added to the element itself?  not the element with the active class on it... in other words why is it on the box and not on the box with the show class?????
+
+TRANSITIONS AGAIN
+????????????????????
+
+want them to come in from different sides...
+so HOW DO YOU SELECT EVERY OTHER BOX????
+.box:nth-of-type(even) 
+!!!!! that is actually quite brilliant 
+
+and you just set the even ones to NEGATIVE 200% position as a translateX 
+so they are OFF THE SCREEN ON THE RIGHT 
+
+.box h2 
+make the fontsize bigger to be able to see it
+
+JAVASCRIPT::::
+
+const boxes use queryselector all .box
+PUTS IN A NODE LIST
+
+we want to fire off an event when we scroll.. 
+
+on the window add an event listener
+????
+
+! need to put the event listener on the window itself listening for the scroll event to happen? yes?  
+
+it will launch the function checkboxes on the scroll event.  
+
+function checkboxes() {
+where is the trigger point when you wnat them to start coming in?
+
+window.innerHeight
+??????
+console log it to find out.  
+
+888 is the window height as gained from the console log. 
+
+the trigger point where do we want it?  
+
+we want it to be a little less than the inner height 
+
+have to do some math i guess... 
+
+
+divide the innerHeight by 5 and then multiply it by 4
+??????
+
+that spits out 532?? thats the triggerr point?
+??????
+
+put into a variable called triggerBottom...
+const
+
+boxes is a node list that you can loop through
+
+use forEach array method 
+
+boxes.forEach(BtripD => { 
+	const boxTop = box.getBoundingClientRect()
+	????????????????????????????/
+
+	!? returns the domRect object... basically a rectangle... providing information about the size of an element related to the viewport... relevant to the viewport.  
+
+want to see where the top of the particular box is...
+
+want to find out where the top value is
+??????????????????
+
+using top to see if you want to add the box of show or not
+
+if the boxtop is less than the trigger bottom
+classlist add show
+
+else box.classList.remove('.show')
+
+as soon as the top of the next box is less than the triggerbottom then
+it will come in.... 
+
+horizontal scroll bar::::
+you want to get rid of it
+
+overflow-x hidden
+THIS WILL REMOVE THE X AXIS SCROLL BAR
+
+
