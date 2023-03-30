@@ -65,3 +65,15 @@ body {
   height: 100%;
   background-color: var(--right-bg-color);
 }
+
+h1 {
+  /* bold title letters for PS5 and Xbox */
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  /* makes it so the title does not go to the next line no matter what*/
+}
