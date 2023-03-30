@@ -42,9 +42,26 @@ body {
   background-size: cover;
 }
 
+.split.left::before {
+  /* think of this like a ghost element we put OVER our element */
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+
 .split.right {
   right: 0;
   background: url('xbox.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color);
 }
