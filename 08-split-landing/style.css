@@ -21,6 +21,16 @@ body {
   margin: 0;
 }
 
+.split.left .btn:hover {
+  background-color: var(--left-btn-hover-color);
+  border-color: var(--left-btn-hover-color);
+}
+
+.split.right .btn:hover {
+  background-color: var(--right-btn-hover-color);
+  border-color: var(--right-btn-hover-color);
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -91,6 +101,8 @@ h1 {
   color: #fff;
   border: #fff solid 0.2rem;
   font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
   width: 15rem;
   padding: 1.5rem;
 }
