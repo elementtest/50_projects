@@ -47,3 +47,24 @@ h3 {
   max-width: 600px;
   /* again a flexibility shrink / grow modifier better to think of it that way.... it grows to 600px with the window resizing but after 600px it STOPS */
 }
+
+.btn {
+  /* changes the button you click to "get another joke */
+  background-color: #9f68e0;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 14px 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+  /* when you click the button you will notice a small pressing animation like you are pressing a real button in real life... it gives in a little and this effect is that it becomes 98 % of its size when your finger is pressing down on it */
+}
+
+.btn:focus {
+  outline: 0;
+}
