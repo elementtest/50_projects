@@ -30,3 +30,20 @@ body {
   width: 800px;
   /* remember that max width can change the value if you vary the size of the element and that width cannot */
 }
+
+h3 {
+  margin: 0;
+  opacity: 0.5;
+  /* changes Dont Laugh Challenge text */
+  letter-spacing: 2px;
+  /* makes the spaces in between the letters larger... kong ge */
+}
+
+.joke {
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin: 50px auto;
+  max-width: 600px;
+  /* again a flexibility shrink / grow modifier better to think of it that way.... it grows to 600px with the window resizing but after 600px it STOPS */
+}
