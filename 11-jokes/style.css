@@ -15,6 +15,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  /* interesting... margin zero will make it so it takes up the entire screen... so the body is an element too... if you have a margin on the body then behind it is the html and that can cause all sorts of problems */
   padding: 20px;
 }
 
