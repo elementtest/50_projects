@@ -13,5 +13,7 @@ function generateJoke() {
   }
   fetch('https://icanhazdadjoke.com/', config)
     .then((res) => res.json())
-    .then((date) => console.log(date))
+    .then((data) => {
+      jokeEl.innerHTML = data.joke
+    })
 }
