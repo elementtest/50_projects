@@ -2,4 +2,7 @@
 
 enter a key and it will show the key code for any key on the keyboard...
 
+keycode is the number that is used by the computer 
+
+and event code is the english name of the key i.e. spacebar, tab, enter, etc
 
