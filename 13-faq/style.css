@@ -67,5 +67,51 @@ h1 {
 
 .faq-text {
   /* joke PUNCH LINE */
-  /* display: none; */
+  display: none;
+  margin: 30px 0 0;
+  /* hides the punch line */
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  /* check box and X box below the punch line */
+  background-color: transparent;
+  border: solid green 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  border: solid pink 5px;
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
 }
