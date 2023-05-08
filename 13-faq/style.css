@@ -37,7 +37,9 @@ h1 {
 .faq.active {
   /* the joke box that is clicked */
   background-color: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+  /* box shadow 0px on the horizontal offset 3px on the vertical offset and 6px on the blur */
+  box-shadow: 110px 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+  /* purposefully made the box shadow bigger to demonstrate its use... when you click on each box the horizontal shadow of 110px will extend wayyy outside of the box */
 }
 
 .faq.active::before,
