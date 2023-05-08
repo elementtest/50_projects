@@ -23,6 +23,7 @@ h1 {
 }
 
 .faq {
+  border: darkblue solid 5px;
   background-color: transparent;
   border: 1px solid #9fa4a8;
   border-radius: 10px;
@@ -35,7 +36,6 @@ h1 {
 
 .faq.active {
   /* the joke box that is clicked */
-  border: orange solid 5px;
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
