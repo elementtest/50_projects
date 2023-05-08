@@ -38,8 +38,11 @@ h1 {
   /* the joke box that is clicked */
   background-color: #fff;
   /* box shadow 0px on the horizontal offset 3px on the vertical offset and 6px on the blur */
-  box-shadow: 110px 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 110px 50px 60px pink;
   /* purposefully made the box shadow bigger to demonstrate its use... when you click on each box the horizontal shadow of 110px will extend wayyy outside of the box */
+  /* second value of 50px will push the vertical shadow DOWN */
+  /* applying a negative -50px will push the vertical shadow UP */
+  /* purposefull made the blur effect 60px will make the clarity of the shadow less clear i.e. light is filtering in with the shadow think of the a screen for mosquitoes casting a shadow... so the more you increase the third value the more porous you make the shadow */
 }
 
 .faq.active::before,
