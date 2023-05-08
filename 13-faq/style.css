@@ -16,6 +16,8 @@ h1 {
 }
 
 .faq-container {
+  /* container that surrounds all the joke items */
+  border: purple solid 5px;
   max-width: 600px;
   margin: 0 auto;
 }
