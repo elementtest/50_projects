@@ -123,10 +123,14 @@ h1 {
 }
 
 .fa-times {
-  border: solid orange 10px;
+  /* border: solid orange 10px; */
+  /* doing this now makes the X box have a large orange border around it. */
 }
+
 .faq.active .faq-toggle .fa-times {
-  color: #fff;
+  /* BLACK X WHEN CLICKED ON */
+  /* faq inside active inside faq-toggle inside .fa-times will turn black */
+  color: black;
   display: block;
 }
 
