@@ -79,13 +79,13 @@ h1 {
 .faq-title {
   /* the upper joke question in EACH box */
   margin: 0 35px 0 0;
-  color: red;
 }
 
 .faq-text {
   /* joke PUNCH LINE */
   display: none;
   margin: 30px 0 0;
+  color: darkred;
   /* hides the punch line */
 }
 
