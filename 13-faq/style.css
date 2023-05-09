@@ -50,8 +50,10 @@ h1 {
 
 .faq.active::before,
 .faq.active::after {
-  /* GREEN CONVERSATION BUBBLE */
+  /* have a before and after will create two psuedo element angry faces in the background.... then you style them LATER DOWN IN THE STYLE SHEET */
+  /* Angry face in background */
   content: '\f556';
+  /* change now to angry face*/
   font-family: 'Font Awesome 5 Free';
   color: #2ecc71;
   font-size: 7rem;
