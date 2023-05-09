@@ -40,7 +40,7 @@ h1 {
   /* the joke box that is clicked */
   background-color: #fff;
   /* box shadow 0px on the horizontal offset 3px on the vertical offset and 6px on the blur */
-  box-shadow: 110px 50px 60px pink;
+  box-shadow: 110px 50px 60px pink, -110px -50px 60px magenta;
   /* purposefully made the box shadow bigger to demonstrate its use... when you click on each box the horizontal shadow of 110px will extend wayyy outside of the box */
   /* second value of 50px will push the vertical shadow DOWN */
   /* applying a negative -50px will push the vertical shadow UP */
