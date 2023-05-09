@@ -95,6 +95,7 @@ h1 {
 
 .faq-toggle {
   /* the down arrow as well as the x positioned to the right */
+  /* DOWN ARROW IS GREEN */
   background-color: transparent;
   border: solid green 5px;
   border-radius: 50%;
@@ -112,6 +113,7 @@ h1 {
 }
 
 .faq-toggle:focus {
+  /* when active DOWN ARROW IS PINK */
   border: solid pink 5px;
   outline: 0;
 }
@@ -120,6 +122,9 @@ h1 {
   display: none;
 }
 
+.fa-times {
+  border: solid orange 10px;
+}
 .faq.active .faq-toggle .fa-times {
   color: #fff;
   display: block;
