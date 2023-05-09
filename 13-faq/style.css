@@ -41,6 +41,7 @@ h1 {
   background-color: #fff;
   /* box shadow 0px on the horizontal offset 3px on the vertical offset and 6px on the blur */
   box-shadow: 110px 50px 60px pink, -110px -50px 60px magenta;
+  /* when you seperate with a comma for box shadow IT WILL PLACE A SECOND SHADOW */
   /* purposefully made the box shadow bigger to demonstrate its use... when you click on each box the horizontal shadow of 110px will extend wayyy outside of the box */
   /* second value of 50px will push the vertical shadow DOWN */
   /* applying a negative -50px will push the vertical shadow UP */
@@ -50,7 +51,7 @@ h1 {
 .faq.active::before,
 .faq.active::after {
   /* GREEN CONVERSATION BUBBLE */
-  content: '\f075';
+  content: '\f556';
   font-family: 'Font Awesome 5 Free';
   color: #2ecc71;
   font-size: 7rem;
