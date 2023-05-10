@@ -8,7 +8,7 @@ body {
   /* ORANGE */
   font-family: 'Roboto', sans-serif;
   background-color: #f0f0f0;
-  border: solid orange 5px;
+  /* border: solid orange 5px; */
 }
 
 h1 {
@@ -19,7 +19,7 @@ h1 {
 
 .faq-container {
   /* container that surrounds all the joke items */
-  border: purple solid 5px;
+  /* border: purple solid 5px; */
   max-width: 600px;
   margin: 0 auto;
 }
@@ -98,7 +98,7 @@ h1 {
   /* the down arrow as well as the x positioned to the right */
   /* DOWN ARROW IS GREEN */
   background-color: transparent;
-  border: solid green 5px;
+  /* border: solid green 5px; */
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -115,8 +115,7 @@ h1 {
 
 .faq-toggle:focus {
   /* when active DOWN ARROW IS PINK */
-  border: solid pink 5px;
-  outline: 0;
+  /* outline: 0; */
 }
 
 .faq-toggle .fa-times {
@@ -131,7 +130,8 @@ h1 {
 .faq.active .faq-toggle .fa-times {
   /* BLACK X WHEN CLICKED ON */
   /* faq inside active inside faq-toggle inside .fa-times will turn black */
-  color: black;
+  background-color: #9fa4a8;
+  color: white;
   display: block;
 }
 
