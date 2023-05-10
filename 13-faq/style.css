@@ -54,6 +54,7 @@ h1 {
   /* Angry face in background */
   content: '\f556';
   /* change now to angry face*/
+  /* note when you remove the stylesheet linking font awesome in the html this content will now break */
   font-family: 'Font Awesome 5 Free';
   color: #2ecc71;
   font-size: 7rem;
