@@ -14,5 +14,33 @@ body {
   align-items: center;
   justify-content: center;
   /* remember that if there is no height the justify content property will not work becuase everything is already collapsed however on the x axis it will be able to be aligned to the center*/
-  /* height: 100vh; */
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  /* naturally have some margin on the body and to make it look sleeker you just set it to 0 */
+}
+
+h3 {
+  /* ENTER ALL OF... WHITE */
+  color: #fff;
+  margin: 10px 0 20px;
+  text-align: center;
+  /* the h3 spans two lines so the second line is kind of on the left so the text align will just make it more presentable in the center */
+}
+
+.container {
+  /* ENTER HAN INPUT BOX WHITE */
+  border: solid green 5px;
+  width: 500px;
+}
+
+textarea {
+  /* INPUT BOX WHITE */
+  border: solid yellow 5px;
+  display: block;
+  width: 100%;
+  /* takes up full size of .container */
+  height: 100px;
+  font-family: inherit;
+  /* text input of the white box will now be in Muli inherited from the body i suppose */
 }
