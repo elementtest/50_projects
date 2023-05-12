@@ -49,3 +49,8 @@ textarea {
   font-size: 16px;
   /* increase size of input text in white box */
 }
+
+textarea:focus {
+  outline: none;
+  /* ugly black outline when you click on the white input box... this should remove it? yes so again a remnant of the 9-s style HTML just will remove the damn 90s styling on it.  */
+}
