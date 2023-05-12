@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b88f0;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* remember that if there is no height the justify content property will not work becuase everything is already collapsed however on the x axis it will be able to be aligned to the center*/
+  height: 100vh;
+}
