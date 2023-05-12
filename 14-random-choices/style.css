@@ -43,4 +43,9 @@ textarea {
   height: 100px;
   font-family: inherit;
   /* text input of the white box will now be in Muli inherited from the body i suppose */
+  padding: 10px;
+  /* text that you input isnt right on the edge of the box */
+  margin: 0 0 20px;
+  font-size: 16px;
+  /* increase size of input text in white box */
 }
