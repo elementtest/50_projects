@@ -29,6 +29,7 @@ h3 {
 }
 
 .container {
+  /* GREEN */
   /* ENTER HAN INPUT BOX WHITE */
   border: solid green 5px;
   width: 500px;
