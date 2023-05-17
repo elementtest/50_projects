@@ -4,3 +4,6 @@ const tagsEl = document.getElementById('tags')
 const textarea = document.getElementById('textarea')
 // WHITE INPUT
 // targets the white input box to input text in order to generate the choices
+textarea.focus()
+//why does this need focus?
+//the focused element is the element that will receive keyboard and similar events by default
