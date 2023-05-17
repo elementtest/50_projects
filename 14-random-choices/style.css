@@ -36,6 +36,7 @@ h3 {
 }
 
 textarea {
+  /* YELLOW */
   /* INPUT BOX WHITE */
   border: solid yellow 5px;
   display: block;
@@ -59,11 +60,18 @@ textarea:focus {
 }
 
 .tag {
-  /* dont style this yet... time to watch the video because as we are styling this css we are not seeing any changes on the screen and that is no the most optimaal.  we want to make a change here and see what happens on the screen.  do this in order to learn */
-  /* uncomment when you go back through the video and get to this section then it will make more sense */
-  /* border: solid orange 5px;
+  /* ORANGE */
+  /* orange choices on the bottm that will show up when you type the choices inside */
+  border: solid orange 5px;
   background-color: #f0932b;
   color: #fff;
   border-radius: 50px;
-  padding: 10px 20px; */
+  padding: 10px 20px;
+  margin: 0 5px 10px 0;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.tag.highlight {
+  background-color: #273c75;
 }
