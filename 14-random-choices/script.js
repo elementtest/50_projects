@@ -11,3 +11,8 @@ textarea.focus()
 // try it out... if it is unfocused the text area will be yellow
 // then focused the color will change to pink
 //the focused element is the element that will receive keyboard and similar events by default
+
+textarea.addEventListener('keyup', (e) => {
+  createTags(e.target.value)
+  // just means the stuff that is entered in the box.  use e.target.value to make the stuff that is entered as something that you can work with in JS
+})
