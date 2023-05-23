@@ -15,8 +15,21 @@ textarea.focus()
 textarea.addEventListener('keyup', (e) => {
   createTags(e.target.value)
   // just means the stuff that is entered in the box.  use e.target.value to make the stuff that is entered as something that you can work with in JS
+  //if you just do e like add event listener keyup e then it will display all the information
 })
 
 function createTags(input) {
-  console.log(input)
+  const tags = input
+    .split(',')
+    .filter((tag) => tag.trim() !== '')
+    .map((tag) => tag.trim())
+
+  tagsEl.innerHTML = ''
+
+  tags.forEach((tag) => {
+    const tagEl = document.createElement('span')
+    tagsEl.classList.add('tag')
+    tagEl.innerText = tag
+    tagsEl.appendChild(tagEl)
+  })
 }
