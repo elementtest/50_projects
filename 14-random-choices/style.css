@@ -75,5 +75,6 @@ textarea:focus {
 }
 
 .tag.highlight {
+  /* has BOTH a class of tag AND highlight */
   background-color: #273c75;
 }
