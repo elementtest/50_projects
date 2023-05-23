@@ -16,3 +16,7 @@ textarea.addEventListener('keyup', (e) => {
   createTags(e.target.value)
   // just means the stuff that is entered in the box.  use e.target.value to make the stuff that is entered as something that you can work with in JS
 })
+
+function createTags(input) {
+  console.log(input)
+}
