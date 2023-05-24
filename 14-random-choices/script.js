@@ -19,10 +19,13 @@ textarea.addEventListener('keyup', (e) => {
 })
 
 function createTags(input) {
-  const tags = input
-    .split(',')
-    .filter((tag) => tag.trim() !== '')
-    .map((tag) => tag.trim())
+  const tags = input.split(',')
+  console.log(tags)
+  const tagsTwo = input.filter((tag) => tag.trim() !== '')
+  console.log(tagsTwo)
+
+  const tagsThree = input.map((tag) => tag.trim())
+  console.log(tagsThree)
 
   tagsEl.innerHTML = ''
 
@@ -33,3 +36,11 @@ function createTags(input) {
     tagsEl.appendChild(tagEl)
   })
 }
+
+/* ARRAY METHODS */
+/* 
+filter:
+filter for each item 
+if its true its in the new array and if its false its not
+
+*/
