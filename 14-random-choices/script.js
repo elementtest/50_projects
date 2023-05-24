@@ -16,6 +16,22 @@ textarea.addEventListener('keyup', (e) => {
   createTags(e.target.value)
   // just means the stuff that is entered in the box.  use e.target.value to make the stuff that is entered as something that you can work with in JS
   //if you just do e like add event listener keyup e then it will display all the information
+  if (e.key === 'Enter') {
+    setTimeout(() => {
+      console.log(e.key)
+      e.target.value = ''
+    }, 500)
+    /* 
+	what is happening here?  
+	if the e.key is enter..... so the event and then under the massive event selection in the browser the key is Enter then....
+	it will reset the entire white box of the e.target.value.. which is just the white box to empty space 
+	two params for the setTimout() function the first being the code
+	that is executed and the second being the amount of time to wait before executing in which case is 500 miliseconds 	
+	500 miliseconds = 0.5 seconds
+	*/
+
+    randomSelect()
+  }
 })
 
 function createTags(input) {
@@ -33,4 +49,8 @@ function createTags(input) {
     tagEl.innerText = tag
     tagsEl.appendChild(tagEl)
   })
+}
+
+function randomSelect() {
+  const times = 30
 }
