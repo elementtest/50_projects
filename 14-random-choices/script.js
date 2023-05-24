@@ -23,5 +23,6 @@ function createTags(input) {
     .split(',')
     .filter((tag) => tag.trim() !== '')
     .map((tag) => tag.trim())
+  /* above the filter and map method just make it so you dont have extra space in there that is entered ie the first item in the array created by .split if you do 1 space space space wont be ['1   ']*/
   console.log(tags)
 }
