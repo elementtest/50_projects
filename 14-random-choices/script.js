@@ -19,13 +19,11 @@ textarea.addEventListener('keyup', (e) => {
 })
 
 function createTags(input) {
-  const tags = input.split(',')
-  console.log(tags)
-  const tagsTwo = input.filter((tag) => tag.trim() !== '')
-  console.log(tagsTwo)
-
-  const tagsThree = input.map((tag) => tag.trim())
-  console.log(tagsThree)
+  const tags = input
+    .split(',')
+    .log(tags)
+    .filter((tag) => tag.trim() !== '')
+    .map((tag) => tag.trim())
 
   tagsEl.innerHTML = ''
 
