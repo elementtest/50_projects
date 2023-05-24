@@ -21,24 +21,7 @@ textarea.addEventListener('keyup', (e) => {
 function createTags(input) {
   const tags = input
     .split(',')
-    .log(tags)
     .filter((tag) => tag.trim() !== '')
     .map((tag) => tag.trim())
-
-  tagsEl.innerHTML = ''
-
-  tags.forEach((tag) => {
-    const tagEl = document.createElement('span')
-    tagsEl.classList.add('tag')
-    tagEl.innerText = tag
-    tagsEl.appendChild(tagEl)
-  })
+  console.log(tags)
 }
-
-/* ARRAY METHODS */
-/* 
-filter:
-filter for each item 
-if its true its in the new array and if its false its not
-
-*/
