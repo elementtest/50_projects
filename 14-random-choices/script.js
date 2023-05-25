@@ -53,6 +53,7 @@ function createTags(input) {
 
 function randomSelect() {
   const times = 30
+  /* the number of times that it will highlight each orange selection before it stops */
 
   const interval = setInterval(() => {
     const randomTag = pickRandomTag()

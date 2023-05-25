@@ -6,3 +6,22 @@ basically a fun way of wheel of fortuning a choice when you dont know which one 
 
 sounds like a cool project
 
+CHOICE SELECTION:::
+if the key is equal to enter then it will call function randomSelect
+
+wait ten milliseconds and then clear the input value... 
+
+function randomSelect()
+const times = 30... the number of times that each one will be highlighted before the spinner stops.  
+
+const interval = setInterval(() => {
+	const randomTag = pickRandomTag()
+}, 100)
+
+function pickRandomTag() {
+	const tags = document.querySelectorAll('.tag')
+	return tags[Math.floor(Math.random() * tags.length]
+
+
+
+
