@@ -76,7 +76,11 @@ function randomSelect() {
 
 function pickRandomTag() {
   const tags = document.querySelectorAll('.tag')
+  /* ORANGE
+  Select all orange tags on the bottom and create a node lise 
+  */
   return tags[Math.floor(Math.random() * tags.length)]
+  /* this selects a random tag from the orange.... returns it as the tags node list followed by the [] index number... this returns a random tag... the math.floor rounds the number down because math.random will give out a decimal.  */
 }
 
 function highlightTag(tag) {
