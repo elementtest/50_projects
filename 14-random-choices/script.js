@@ -18,8 +18,7 @@ textarea.addEventListener('keyup', (e) => {
   //if you just do e like add event listener keyup e then it will display all the information
   if (e.key === 'Enter') {
     setTimeout(() => {
-      console.log(e.key)
-      e.target.value = ''
+      e.target.value = 'BTRIPD'
     }, 500)
     /* CLEARS WHITE INPU SPACE */
     /* 
@@ -43,6 +42,7 @@ function createTags(input) {
   /* above the filter and map method just make it so you dont have extra space in there that is entered ie the first item in the array created by .split if you do 1 space space space wont be ['1   '].*/
 
   tagsEl.innerHTML = ''
+  /* success!!! this just makes the example orange tags of choice 1 choice 2 choice 3 disappear */
 
   tags.forEach((tag) => {
     const tagEl = document.createElement('span')
@@ -53,7 +53,7 @@ function createTags(input) {
 }
 
 function randomSelect() {
-  const times = 30
+  const times = 10
   /* the number of times that it will highlight each orange selection before it stops */
 
   const interval = setInterval(() => {
