@@ -21,6 +21,7 @@ textarea.addEventListener('keyup', (e) => {
       console.log(e.key)
       e.target.value = ''
     }, 500)
+    /* CLEARS WHITE INPU SPACE */
     /* 
 	what is happening here?  
 	if the e.key is enter..... so the event and then under the massive event selection in the browser the key is Enter then....
