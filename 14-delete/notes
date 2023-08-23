@@ -1,0 +1,108 @@
+#project for picking random choices....
+
+type choices out and it will generate buttons of the choices below the input dialogue... as soon as you hit enter it will generate a dice effect of cycling through the choice boxes and then will stop on a random choice 
+
+basically a fun way of wheel of fortuning a choice when you dont know which one to pick.  
+
+sounds like a cool project
+
+CHOICE SELECTION:::
+if the key is equal to enter then it will call function randomSelect
+
+wait ten milliseconds and then clear the input value... 
+
+function randomSelect()
+const times = 30... the number of times that each one will be highlighted before the spinner stops.  
+
+const interval = setInterval(() => {
+	const randomTag = pickRandomTag()
+}, 100)
+
+function pickRandomTag() {
+	const tags = document.querySelectorAll('.tag')
+	return tags[Math.floor(Math.random() * tags.length]
+
+
+
+
+project explained out:  
+JS::::
+dom variable selecting orange tags on the bottom
+
+dom variable selecting white input area.  
+
+textarea.focus()
+all this does is just focus the box on the page loading 
+
+WHITE AREA
+ADD EVENT LISTENER
+ON KEYUP (key hit) 
+do this:  
+execute function CreateTags with 
+e.target.value as param
+e.target.value is the event if you console.log(e) then you will seee the event with like 300 different params.  its simply whats typed into the box
+
+execute CreateTags::::
+step 1:  
+prepare the stuff that is entered in in an acceptable way using split, filter, trim and map to make the act of inputting it NON BUGGY i.e. no white space etc.  
+also what is being done here is that you are specifying that they are split each individually by a comma 
+
+step 2: 
+use prepared input from step one and place it INSIDE ORANGE TAGS
+tagsEl.innerHTML = ''
+tagsEL is the orange
+
+step 3:  
+execute forEach array method on orange input from step one.  
+create new DOM element called tagEl NOT tagsEl no s
+document.createElement('span')
+STYLE NEWLY CREATED DOM WITH 
+classList.add('tag')
+its now styled as an orange tag 
+tagEl.innerText = tag
+what we're missing here is that tags... is an array... when you console.log it its an array so you use forEach on the array for each element in the array specified by forEach(tag) tag being the leemnt in the array.  then
+tagEl.innerText = tag. 
+the text that shows on that element is the element text itself 
+ok
+so now youve created a dom element, styled the dom element and specified what should be placed inside the dom element in step 3.  
+
+last thing of step three is that you need to tell it where to go with this line of code ...
+tagsEl.appendChild(tagEl)
+nw you are appending this newly created element as a child to tagsEl
+what is tagsEl?  they are the orange tags under the white box.  
+
+in the html the div id of tags comes and you specified that in the js 
+as tagsEl
+
+so there ya go you have now appended that as a child element.  
+
+alright so createTags did just that it styled the input.. cleared the other example tags of choice 1 choice 2 etc 
+
+
+back to our EVENT LISTENER::::
+you use the e.target.value which is the stuff you entered into the white space and make that as input into createTags function to clean up the entries, style them and append them as children udner the white box good!  
+we have now understood 
+textarea.addEventListener('keyup', (e) => {
+createTags(e.target.value)
+
+SECOND STEP IN EVENT LISTENER:::::
+if (e.key === 'Enter') {
+setTimeout(() => {
+e.target.value = ''
+}, 500}	
+this is now just a modification on our event listener.... if the e.key.. i think you need to do it differently... probably something on shift or control.  
+not sure why the e.target.value and e.key have to be different. 
+ok so... it seems the key returns the value of the key pressed by the user
+so i am guessing that e.key is just more on an individual level than the e.target.value level  
+
+back to it... second step if teh enter key is hit... have a timeout funciton that will execute 500 miliseconds or 1/2 a second after the enter key is hit to clear the input or if youre huaihuai de make the input become BTRIPD 
+
+
+THIRD STEP IN THE EVENT LISTENER:::::
+execute randomSelect() function
+
+function randomSelect() {}
+
+const times = 30 specify the amount of times that it will flicker before stopping
+
+
