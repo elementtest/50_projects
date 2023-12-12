@@ -2,6 +2,7 @@ const progress = document.getElementById('progress')
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
 const circles = document.querySelectorAll('.circle')
+
 //create variables linked to each dom element.. last one circles is a node list that is not the same as an array but very similar
 let currentActive = 1
 //creates a counter to track where in each of the four steps we are
