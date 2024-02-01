@@ -1,77 +1,76 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 * {
-  box-sizing: border-box;
-  border: 1px solid red;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Muli', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
-  overflow: hidden;
-  margin: 0;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    overflow: hidden;
+    margin: 0;
 }
 
 .container {
-  display: flex;
-  border: 1px solid red;
-  width: 90vw;
+    display: flex;
+    border: 1px solid red;
+    width: 90vw;
 }
 
 .panel {
-  background-size: cover;
-  /* origially background-size auto 100% had to delete auto to make the image fill the entire card  */
-  /* other notes.  on closer inspection had to change the background size to cover to scale the image to fit the container now i dont need to create a seperate css rule */
-  background-position: top;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  color: #fff;
-  cursor: pointer;
-  /* sets cursor to micky mouse hand when hovering over */
-  flex: 0.5;
-  margin: 10px;
-  position: relative;
-  transition: flex 0.7s ease-in;
+    background-size: cover;
+    /* origially background-size auto 100% had to delete auto to make the image fill the entire card  */
+    /* other notes.  on closer inspection had to change the background size to cover to scale the image to fit the container now i dont need to create a seperate css rule */
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    /* sets cursor to micky mouse hand when hovering over */
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
 }
 
 .panel h3 {
-  font-size: 24px;
-  position: absolute;
-  bottom: 20px;
-  /* moves the text to the bottom of the card */
-  left: 20px;
-  /* from the left moves the text over 20px so it's actually going right */
-  margin: 0;
-  opacity: 0;
-  /* setting opacity to 0 makes it so you cannot see the text because we want only the active panel to show the h3 text */
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    /* moves the text to the bottom of the card */
+    left: 20px;
+    /* from the left moves the text over 20px so it's actually going right */
+    margin: 0;
+    opacity: 0;
+    /* setting opacity to 0 makes it so you cannot see the text because we want only the active panel to show the h3 text */
 }
 
 .panel.active {
-  flex: 5;
-  opacity: 1;
-  /* background-size: 100%; */
-  /* when the panel is active you remove the auto from it because it is interfering with styling */
-  /* changed to background size cover in order to fill the container completely  */
+    flex: 5;
+    opacity: 1;
+    /* background-size: 100%; */
+    /* when the panel is active you remove the auto from it because it is interfering with styling */
+    /* changed to background size cover in order to fill the container completely  */
 }
 
 .panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media (max-width: 480px) {
-  /* if the screen is UNDER 480 pixels then the following styles will take effect */
-  .container {
-    width: 100vw;
-    /* container takes up more room on smaller screens */
-  }
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-    /* want to remove the last two cards on smaller screens because it doesnt look too great */
-  }
+    /* if the screen is UNDER 480 pixels then the following styles will take effect */
+    .container {
+        width: 100vw;
+        /* container takes up more room on smaller screens */
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        border: 1px pink solid;
+        /* want to remove the last two cards on smaller screens because it doesnt look too great */
+    }
 }
