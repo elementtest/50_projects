@@ -16,7 +16,6 @@ body {
 
 .container {
     display: flex;
-    border: 1px solid red;
     width: 90vw;
 }
 
@@ -31,10 +30,10 @@ body {
     color: #fff;
     cursor: pointer;
     /* sets cursor to micky mouse hand when hovering over */
-    flex: 0.5;
+    flex: 1;
     margin: 10px;
     position: relative;
-    transition: flex 0.7s ease-in;
+    transition: flex 0.7s linear;
 }
 
 .panel h3 {
@@ -58,6 +57,7 @@ body {
 }
 
 .panel.active h3 {
+    text-shadow: 1px 1px 0 black;
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
 }
@@ -70,7 +70,7 @@ body {
     }
     .panel:nth-of-type(4),
     .panel:nth-of-type(5) {
-        border: 1px pink solid;
+        border: 4px pink solid;
         /* want to remove the last two cards on smaller screens because it doesnt look too great */
     }
 }
