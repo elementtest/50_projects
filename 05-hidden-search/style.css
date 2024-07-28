@@ -1,72 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700display=swap');
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    transition: 1.5s ease;
 }
 
 body {
-  background-image: linear-gradient(90deg, blue, yellow);
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* moves search box to center of the x axis*/
-  height: 100vh;
-  /* take total viewport height and slice into 100 pieces 1vh is one slice of those 100 */
-  /* the viewport without a height was collapsed to the height of the element... so you were seeing that justify content on the x axis was having an effect at centering but no effect on the y with align items because the height was completely collapsed.  increasing the height then makes the y adjustment able to happen */
-  overflow: hidden;
-  margin: 0;
-  /* eliminates margin on the body.. */
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(45deg, #ff6b6b, #f06595, #d2a6e0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
 }
 
 .search {
-  position: relative;
-  height: 50px;
+    height: 50px;
+    position: relative;
 }
 
 .search .input {
-  /* ^^ ORANGE COLORED SEARCH BAR */
-  /* ^^ targeting the search bar to left of magnifying glass */
-  background-color: orange;
-  border: 0;
-  /* gets rid of black preset border around the search box */
-  font-size: 18px;
-  padding: 15px;
-  /* space between content inside search bar and border */
-  height: 50px;
-  width: 50px;
-  transition: width 0.3s ease;
-  /* when the properties of the orange bar change then it will follow along with the transition above  */
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    /*transition: width 0.3s ease;*/
 }
 
 .btn {
-  /* ^^ magnifying glass icon ^^ */
-  background-color: red;
-  border: 0;
-  cursor: pointer;
-  font-size: 24px;
-  /* !!! not apparant increasing font size will increase icon size */
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 50px;
-  width: 50px;
-  /* here you are making RED and ORANGE the same height and the same position in the un active position so the magnifying glass in on top of the search bar.  the idea is when you hit it.. then the active class will come into play */
-  transition: transform 0.3s ease;
-  /* when the properties of the magnifying glass icon change it will follow the transition above...  */
+    background-color: #fff;;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    /*transition: transform 0.3s ease;*/
 }
 
-.btn:focus,
-.input:focus {
-  /* outline: none; */
-  ELIMINATING ANOTHER HTML BY DEFAULT SETTING... when you click a search bar an ugly black outline surrounds it... this just simply gets rid of it to look more sleak
+.btn:focus, input:focus {
+    /*outline: none;*/
 }
 
 .search.active .input {
-  width: 200px;
+    width: 200px;
+  /*
+originally the input will be small and covered byt the magnifying button icon
+but with the class of active will expand to 200px
+  */
 }
-/* NOTE ON BOTH .SEARCH.ACTIVE .INPUT AND .SEARCH.ACTIVE .BTN>>>>> clever use... you put the active class on the search which ENCLOSES both the RED and the ORANGE and both will then be styled at the same time with ONE event listener...  */
+
 .search.active .btn {
-  transform: translateX(198px);
-  /* transform translate x will move the element WEST or EAST on the x axis.... use negative number for WEST and positive for EAST */
+    border: solid red 5px;
+    transform: translateX(198px);
 }
+
+
