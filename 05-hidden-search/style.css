@@ -28,7 +28,7 @@ body {
     padding: 15px;
     height: 50px;
     width: 50px;
-    /*transition: width 0.3s ease;*/
+    transition: width 0.3s ease;
 }
 
 .btn {
@@ -41,11 +41,11 @@ body {
     left: 0;
     height: 50px;
     width: 50px;
-    /*transition: transform 0.3s ease;*/
+    transition: transform 0.3s ease;
 }
 
 .btn:focus, input:focus {
-    /*outline: none;*/
+
 }
 
 .search.active .input {
@@ -57,7 +57,6 @@ but with the class of active will expand to 200px
 }
 
 .search.active .btn {
-    border: solid red 5px;
     transform: translateX(198px);
 }
 
