@@ -20,7 +20,7 @@ function blurring() {
 
   loadText.innerText = `${load}%`
   //change the text of the loading screen percentage... using `` whatever that is called and then using a variable inside which we studied before you have to use ${} the $ on the end is used as concatanation.... thats a string on the end of the variable to show its a percent
-  let loaddPercentage = (loadText.style.opacity = scale(load, 0, 100, 1, 0))
+  let loadPercentage = (loadText.style.opacity = scale(load, 0, 100, 1, 0));
   //THIS IS THE LOADING TEXT PERCENTAGE I.E 5% NOT THE PICTURE... will start at the MOST CLEAR which is 1 and go to the MOST BLURRY WHICH IS 0 THE DOCUMENTATION IS RIGHT
   //   console.log(loaddPercentage)
   let pictureBlur = (bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`)
